@@ -25,11 +25,14 @@ class Song
     @@genres.uniq
   end 
   
-  def self.genre_count 
-    unique_genre = @@genres.uniq
-    genre_count = unique_genre.count
-    genre_numbers = Hash[@@genres.collect {|one_genre| [one_genre, one_genre.count]}]
+ def self.genre_count
+    @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
   end 
-    end
+  
+  def self.artist_count
+    @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1; total}
+  end 
+  
+end
     
   
