@@ -28,6 +28,7 @@ class Song
   def self.genre_count 
     unique_genre = @@genres.uniq
     genre_count = unique_genre.count
+    genre_hash = {}
     binding.pry
   end 
     end
