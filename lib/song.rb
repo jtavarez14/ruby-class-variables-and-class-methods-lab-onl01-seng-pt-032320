@@ -23,14 +23,12 @@ class Song
   
   def self.genres 
     @@genres.uniq
-    binding.pry
   end 
   
   def self.genre_count 
     unique_genre = @@genres.uniq
     genre_count = unique_genre.count
-    genre_numbers = Hash[@@genres.collect {|one_genre| [one_genre, one_genre.count]}] 
-    
+    binding.pry
   end 
     end
     
